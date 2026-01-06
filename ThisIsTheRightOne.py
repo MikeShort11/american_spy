@@ -1,6 +1,6 @@
 # Simple Caesar Cipher Encryption without if statements
 
-def encrypt(text, shift):
+#def encrypt(HowDoWeSetTheMessage?):
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     #how can we sotre the result
     
