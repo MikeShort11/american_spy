@@ -1,0 +1,35 @@
+# PROJECT: Brute Force Caesar Decoder (Pseudocode)
+#remember what we discussed and dont be afraid to ask questions
+#you got this!
+
+#this is pseudocode for a main function:
+
+SET encrypted_message TO some text
+SET alphabet TO all uppercase letters in order
+SET alphabet_length TO number of letters
+
+CONVERT encrypted_message TO uppercase
+
+FOR each shift FROM 0 TO alphabet_length - 1:
+
+    SET trial_text TO empty
+
+    FOR each character c IN encrypted_message:
+
+        IF c IS a letter in alphabet:
+
+            FIND the position of c in alphabet
+            SET new_position TO (position - shift)
+
+            IF new_position IS less than 0:
+                ADD alphabet_length TO new_position
+
+            SET new_letter TO alphabet[new_position]
+            ADD new_letter TO trial_text
+
+        ELSE:
+            # keep things like spaces or punctuation
+            ADD c TO trial_text
+
+    PRINT the shift number and trial_text
+    PRINT a separator line
